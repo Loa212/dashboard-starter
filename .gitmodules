@@ -1,0 +1,3 @@
+[submodule "my-pkg"]
+	path = my-pkg
+	url = https://github.com/Loa212/my-pkg.git
