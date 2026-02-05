@@ -1,4 +1,6 @@
 import { Loader2 } from "lucide-react";
+import { greet } from "my-package-template";
+import {} from "my-pkg";
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
@@ -21,6 +23,10 @@ export function LoginForm({
 	const [isLoading, setIsLoading] = useState(false);
 	const [sent, setSent] = useState(false);
 	const [error, setError] = useState<string | null>(null);
+
+	greet({
+		message: "Hello from the login form component!",
+	});
 
 	async function handleSubmit(e: React.FormEvent) {
 		e.preventDefault();
