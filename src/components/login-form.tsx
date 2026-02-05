@@ -1,6 +1,5 @@
 import { Loader2 } from "lucide-react";
 import { greet } from "my-package-template";
-import {} from "my-pkg";
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
