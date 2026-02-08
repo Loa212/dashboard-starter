@@ -4,7 +4,13 @@ This document contains guidelines and workflows for AI agents working on this co
 
 ## General Guidelines
 
-Use pnpm for all package management, all scripts and commands.
+- Use pnpm for all package management, all scripts and commands.
+- Follow the established code style and patterns in the codebase.
+- Write clear, descriptive commit messages and PR descriptions.
+- Use gh CLI as much as possible for all GitHub interactions, including PR creation and management.
+- Avoid using `gh` or `git` commands for specific file operations; instead, use the appropriate pnpm scripts or manual file edits as needed. For example, avoid using `git add <file>` and instead always use `git add .` to ensure all changes are staged properly without hitting permission issues. When prompted to work on an issue, you should use `gh issue view <issue-number>` to read the issue details, `gh issue develop <issue-number> -c` to start working on the issue, and then `gh pr create` to create a pull request, ensuring that all changes are included and properly documented in the PR description.
+- When in doubt, ask for clarification or guidance from the team but always try to find the answer in the documentation or codebase first. This shows initiative and helps you learn the codebase better.
+- Whenever you discover new information about the codebase, architecture, or best practices, document it in this file under the `Findings & Recommendations` section. This will help future agents and developers understand the context and make informed decisions.
 
 ## QUALITY EXPECTATIONS
 
@@ -48,3 +54,5 @@ Fight entropy. Leave the codebase better than you found it.
 - **Optional Telegram Bot**: For production auth notifications (optional, won't break if not configured)
 - **Local DB**: PostgreSQL via Docker Compose
 - **Path Aliases**: `~/` configured for clean imports
+
+### Findings & Recommendations
